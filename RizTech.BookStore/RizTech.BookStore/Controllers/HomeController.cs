@@ -8,9 +8,9 @@ namespace RizTech.BookStore.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        public ViewResult Index()
         {
-            return "RizTech";
+            return View();
         }
     }
 }
