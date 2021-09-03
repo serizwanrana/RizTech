@@ -39,18 +39,8 @@ namespace RizTech.BookStore
             {
                 app.UseDeveloperExceptionPage();
             }
-            //else
-            //{
-            //    app.UseExceptionHandler("/Error");
-            //}
-
+            
             app.UseStaticFiles();
-
-            //app.UseStaticFiles(new StaticFileOptions()
-            //{
-            //    FileProvider = new PhysicalFileProvider(Path.Combine( Directory.GetCurrentDirectory(), "StaticFiles")),
-            //    RequestPath = "/StaticFiles"
-            //}) ;
 
             app.UseRouting();
 
@@ -59,10 +49,6 @@ namespace RizTech.BookStore
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
-                //endpoints.MapControllerRoute( 
-                //    name: "Default",
-                //    pattern: "urtech/{controller=Home}/{action=Index}/{id?}"); // This is using for Anchor TagHelper
-                //endpoints.MapRazorPages();
             });
         }
     }

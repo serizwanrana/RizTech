@@ -27,7 +27,6 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white container">
 
             <a class="navbar-brand" href="/">
-                @*<img src="~/images/UR_Logo.png" width="110" height="30" alt="">*@
                 <img src="~/images/UR_Logo.png" width="110" height="30" alt="" asp-append-version="true"> @*Image TagHelper use to update the image as well improve the performance also use to generate the version key*@
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,30 +36,21 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        @*<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a> //This is without Anchor tagHelper*@
                         <a class="nav-link" asp-controller="Home" asp-action="Index">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        @*<a class="nav-link" href="/home/aboutus">About</a> //This is without Anchor tagHelper*@
                         <a class="nav-link" asp-controller="Home" asp-action="aboutus">About</a>
                     </li>
                     <li class="nav-item">
-                        @*<a class="nav-link" href="/home/contactus">Contact</a> //This is without Anchor tagHelper*@
                         <a class="nav-link" asp-controller="Home" asp-action="contactus">Contact</a>
                     </li>
                     <li class="nav-item">
-                        @*<a class="nav-link" href="/Book/GetAllBooks">All Books</a> //This is without Anchor tagHelper*@
                         <a class="nav-link" asp-controller="Book" asp-action="GetAllBooks">All Books</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Book" asp-action="AddNewBook">Add New Book</a>
                     </li>
-
-                    <!--<li class="nav-item">-->
-                    @*Following line use for asp-protocol and asp-host*@
-                    <!--<a class="nav-link" asp-protocol="http" asp-host="urtech.com" asp-controller="Book" asp-action="GetAllBooks">New Link</a>
-    </li>-->
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2" type="submit">Login</button>

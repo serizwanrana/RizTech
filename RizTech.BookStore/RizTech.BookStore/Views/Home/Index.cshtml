@@ -1,40 +1,7 @@
-﻿@*@{
-        var data = ViewBag.Data; // This is using for displaying ViewBag
-    }*@
-
-@*@{
-        var bookInfo = ViewData["Books"] as BookModel; // This is for displaying ViewData
-    }*@
-
-@*@{
-    ViewData["Title"] = "Home";
-}*@
-@*@{ 
-    var book = ViewData["Book"] as BookModel; This block use for ViewData Attribute in complex form
-}*@
+﻿
 <section class="jumbotron text-center bg-white">
     <div class="container">
-        <h1>Welcome to Book Store </h1>
-
-        @*<environment include="Development">
-            <h3>Development </h3>
-        </environment>
-        <environment exclude="Development">
-            <h3>Production </h3>
-        </environment>*@
-        @*Id = @book.Id,  Book = @book.Title  // ViewData Attribute in complex form*@
         <p class="lead text-muted">
-            @*@ViewBag.Title
-            @data.Id @data.Name </br>
-            Id = @ViewBag.Type.Id </br>
-            Name = @ViewBag.Type.Author*@
-
-            @*@ViewData["Property1"]</br> // ViewData
-            Id = @bookInfo.Id
-            Name = @bookInfo.Author*@
-
-            @*@ViewData["CustomProperty"] // This is ViewData Attribute*@
-
             This is Book Store, you can purchase any kind of book from this Book Store.
             Here are lot of categories of Books in this Book Store, like English, Urdu and other languages Books as well.
         </p>
@@ -96,16 +63,6 @@
         </div>
     </div>
 </div>
-
-@*@section breadcrumb{
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Library</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Data</li>
-            </ol>
-        </nav>
-    }*@
 
 @section section1{
     <script>

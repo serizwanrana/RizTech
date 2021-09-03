@@ -1,19 +1,7 @@
-﻿@*@model IEnumerable<RizTech.BookStore.Models.BookModel>*@
-@*@using RizTech.BookStore.Models;*@
-@*@model IEnumerable<BookModel>*@
-
+﻿
 @{
     ViewData["Title"] = "All Books";
 }
-
-@*@{ 
-    var parameters = new Dictionary<string, string>() // User for passing multiple parameters from the url
-    {
-        { "name","rizwan" },
-        {"company", "urtech" },
-        {"appName", "bookstore" }
-    };
-}*@
 
 <div class="container">
     <h3 class="display-4">All Books</h3>
@@ -28,13 +16,7 @@
                         <p class="card-text">@item.Description</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                @*<a href="/book/GetBook/@item.Id" class="btn btn-sm btn-outline-secondary">View Details</a>*@
-                                @*<a asp-controller="Book" asp-action="getbook" asp-route-id="@item.Id" asp-fragment="similarBooks" class="btn btn-sm btn-outline-secondary">View Details</a> // Using of asp-fragment*@
-                                @*<a asp-controller="Book" asp-action="getbook" asp-route-id="@item.Id" asp-route-nameOfbook="@item.Title" class="btn btn-sm btn-outline-secondary">View Details</a>*@
                                 <a asp-route="bookdetailsrout" asp-route-id="@item.Id" asp-route-nameOfbook="@item.Title" class="btn btn-sm btn-outline-secondary">View Details</a>
-                                @*<a asp-controller="Book" asp-action="getbook" asp-route-nameOfbook="@item.Title"
-        asp-all-route-data="parameters" class="btn btn-sm btn-outline-secondary">View Details</a>*@
-
                             </div>
                             <small class="text-muted">@item.Author</small>
                         </div>
