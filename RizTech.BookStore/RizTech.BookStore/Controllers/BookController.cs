@@ -35,6 +35,7 @@ namespace RizTech.BookStore.Controllers
         //    return bookRepository.GetBookById(id);
         //}
 
+        [Route("book-details/{id}", Name ="bookdetailsrout")]
         public ViewResult GetBook(int id)
         {
             //dynamic data = new ExpandoObject(); //For dynamic Views
@@ -46,6 +47,16 @@ namespace RizTech.BookStore.Controllers
         public List<BookModel> SearchBook(string BookName, string AuthorName)
         {
             return bookRepository.SearchBook(BookName, AuthorName);
+        }
+
+        public ViewResult AddNewBook()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ViewResult AddNewBook(BookModel bookModel)
+        {
+            return View();
         }
     }
 }

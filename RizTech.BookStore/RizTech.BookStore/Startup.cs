@@ -59,6 +59,9 @@ namespace RizTech.BookStore
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
+                //endpoints.MapControllerRoute( 
+                //    name: "Default",
+                //    pattern: "urtech/{controller=Home}/{action=Index}/{id?}"); // This is using for Anchor TagHelper
                 //endpoints.MapRazorPages();
             });
         }
